@@ -1,4 +1,3 @@
-'use'
 function test(){
   // create a button
   // input tag
