@@ -1,39 +1,17 @@
+'use client'
 const Product = () => {
+    const handleClick = (e) => {
+        console.log(e)
+    }
 
     return (
         <div>
-            <input/>
-            <Cart chocolate = "KitKat"/>
-            <WishList chocolate = "Orange Ball"/>
+            <input onChange={handleClick}/>
+            <button onClick={handleClick} style={{width:'67px', height:'33px', backgroundColor:'red'}}>Click me</button>
         </div>
     )
 }
 
-const Cart = (props) => {
-
-    return (
-        <div>
-            <button>Chocolate Name: {props.chocolate}</button>
-        </div>
-    )
-}
-
-const WishList = (props) => {
-
-    return (
-        <div>
-            WishList
-            <Auth chocolate = {props.chocolate}/>
-        </div>
-    )
-}
-
-const Auth = (props) => {
-
-    return (
-        <button>Chocolate Name: {props.chocolate}</button>
-    )
-}
 
 export default Product
 
