@@ -1,13 +1,19 @@
 'use client'
 const Product = () => {
-    const handleClick = (e) => {
-        console.log(e)
+    const callMe = ()=> {
+        console.log("I am called")
     }
-
     return (
         <div>
-            <input onChange={handleClick}/>
-            <button onClick={handleClick} style={{width:'67px', height:'33px', backgroundColor:'red'}}>Click me</button>
+            <input/>
+            <Cart chocolate="kitkat" callMe={callMe}/>
+        </div>
+    )
+    }
+    const Cart = (props)=>{
+    return (
+        <div>
+            <button onClick={props.callMe}>Click Me</button>
         </div>
     )
 }
